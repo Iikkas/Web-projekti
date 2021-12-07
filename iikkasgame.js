@@ -3,13 +3,14 @@ window.onload = function () {
 };
 let totalPoints = 0;
 let correctAnswer;
+let qString;
 
 // forms thee random math problem
 function randomQuestion() {
   let eka = getRandomInt(1, 9);
   let operator = getRandomOperator();
   let toka = getRandomInt(1, 9);
-  let qString = eka + operator + toka;
+  qString = eka + operator + toka;
   document.getElementById("question").innerHTML = qString;
   correctAnswer = eval(qString);
 }
@@ -46,6 +47,10 @@ function checkInput() {
   userAnswer = Number(userAnswer);
   if (userAnswer === correctAnswer) {
     totalPoints++;
+    if (totalPoints === 5) {
+      alert('VOITIT PELIN')
+      totalPoints = 0
+    }
   } else {
     showAnswer()
   }
@@ -57,11 +62,10 @@ function checkInput() {
 
 function showAnswer() {
     let show = document.getElementById("showAnswer");
-    show.innerHTML = "Oikea vastaus olisi ollut: " + correctAnswer
+    show.innerHTML = "Oikea vastaus olisi ollut: " + correctAnswer + " (" +qString + ")"
     setTimeout(function(){
         show.innerHTML = ""
 
-    },3000)
+    },6000)
 }
-
 //reset button
