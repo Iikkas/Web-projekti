@@ -1,0 +1,56 @@
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+header {
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+[div~=flex-column] {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+footer {
+    grid-column: 1/3;
+}
+
+footer > div > ul {
+    list-style-type: none;
+    padding: 3em;
+}
+
+body > div:last-of-type {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+}
+
+[div~=row] {
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+
+#firstCard {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+#secondCard {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+#thirdCard {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+#fourthCard {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
