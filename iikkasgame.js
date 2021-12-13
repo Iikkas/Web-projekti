@@ -1,9 +1,11 @@
 window.onload = function () {
   randomQuestion();
 };
+
 let totalPoints = 0;
 let correctAnswer;
 let qString;
+var input = document.getElementById("input")
 
 // forms thee random math problem
 function randomQuestion() {
@@ -34,6 +36,17 @@ function getRandomOperator() {
   }
 }
 
+// makes pressing enter to submit answer possible
+input.addEventListener("keyup", function(event) {
+  // Number 13 is the "Enter" key on the keyboard
+  if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+    document.getElementById("button").click();
+  }
+});
+
 // checks input
 document.getElementById("button").onclick = checkInput;
 
@@ -48,6 +61,7 @@ function checkInput() {
   if (userAnswer === correctAnswer) {
     totalPoints++;
     if (totalPoints === 5) {
+
       alert('VOITIT PELIN')
       totalPoints = 0
     }
