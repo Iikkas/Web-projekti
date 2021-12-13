@@ -4,18 +4,102 @@
 let divList = document.querySelectorAll(".exercises>div");
 let pList = document.querySelectorAll(".exercises>div>p:nth-child(2)");
 let inputList = document.querySelectorAll("input");
-let buttonList = document.querySelectorAll("button");
+let buttonList = document.querySelectorAll(".exercises>div>button");
 
 // Satunnaislukugeneraattori
 function randomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// Event listenerit
+// Tarkistuspainikkeet
 for (let i = 0; i < buttonList.length; i++) {
     buttonList[i].addEventListener("click", function() {checkAnswer(i)});
-    buttonList[i].addEventListener("click", showTotalScore);
 }
+
+// Last- ja next-painikkeet
+let lastButton = document.querySelector(".content>button:first-child");
+let nextButton = document.querySelector(".content>button:nth-child(2)");
+
+lastButton.addEventListener("click", lastExercise);
+nextButton.addEventListener("click", nextExercise);
+
+function lastExercise() {
+    if (!divList[0].classList.contains("hidden")) {
+        inputList[0].focus();
+    } else {
+        for (let i = 1; i < divList.length; i++) {
+            if (!divList[i].classList.contains("hidden")) {
+                divList[i].classList.toggle("hidden");
+                divList[i-1].classList.toggle("hidden");
+                inputList[i-1].focus();
+            }
+        }
+    }
+    /*if (!divList[1].classList.contains("hidden")) {
+        divList[1].classList.toggle("hidden");
+        divList[0].classList.toggle("hidden");
+        inputList[0].focus();
+    } else if (!divList[2].classList.contains("hidden")) {
+        divList[2].classList.toggle("hidden");
+        divList[1].classList.toggle("hidden");
+        inputList[1].focus();
+    } else if (!divList[3].classList.contains("hidden")) {
+        divList[3].classList.toggle("hidden");
+        divList[2].classList.toggle("hidden");
+        inputList[2].focus();
+    } else if (!divList[4].classList.contains("hidden")) {
+        divList[4].classList.toggle("hidden");
+        divList[3].classList.toggle("hidden");
+        inputList[3].focus();
+    } else {
+        inputList[0].focus();
+    }*/
+}
+
+function nextExercise() {
+    if (!divList[4].classList.contains("hidden")) {
+        inputList[4].focus();
+    } else {
+        for (let i = 3; i < divList.length - 1; i--) {
+            if (!divList[i].classList.contains("hidden")) {
+                divList[i].classList.toggle("hidden");
+                divList[i+1].classList.toggle("hidden");
+                inputList[i+1].focus();
+            }
+        }
+    }
+    /*if (!divList[0].classList.contains("hidden")) {
+        divList[0].classList.toggle("hidden");
+        divList[1].classList.toggle("hidden");
+        inputList[1].focus();
+    } else if (!divList[1].classList.contains("hidden")) {
+        divList[1].classList.toggle("hidden");
+        divList[2].classList.toggle("hidden");
+        inputList[2].focus();
+    } else if (!divList[2].classList.contains("hidden")) {
+        divList[2].classList.toggle("hidden");
+        divList[3].classList.toggle("hidden");
+        inputList[3].focus();
+    } else if (!divList[3].classList.contains("hidden")) {
+        divList[3].classList.toggle("hidden");
+        divList[4].classList.toggle("hidden");
+        inputList[4].focus();
+    } else {
+        inputList[4].focus();
+    }*/
+}
+
+// Vastatut kysymykset
+let qAnswered = 0;
+let answerTracker = document.querySelector("p");
+
+function questionsAnswered() {
+    answerTracker.textContent = "Vastatut kysymykset: " + qAnswered + "/5";
+}
+questionsAnswered();
+
+// Ensimmäisen tehtävän syöttökenttään kohdistaminen
+inputList[0].focus();
 
 // Tehtävä 1.
 let minuend = randomNumber(20, 40);
@@ -102,16 +186,6 @@ let answer5 = 100 - oskuWins - iinesWins;*/
 // Vastauslista
 let answerList = [answer1, answer2, answer3, answer4, answer5];
 
-// Vastatut kysymykset
-let qAnswered = 0;
-let answerTracker = document.querySelector("p");
-
-// Vastattujen kysymysten lukumäärän näyttäminen
-function questionsAnswered() {
-    answerTracker.textContent = "Vastatut kysymykset: " + qAnswered + "/5";
-}
-questionsAnswered();
-
 // Vastausten tarkitus
 function checkAnswer(index) {
     if (inputList[index].value !== "") {
@@ -127,18 +201,41 @@ function checkAnswer(index) {
         buttonList[index].disabled = true;
         qAnswered++;
         questionsAnswered();
+        showTotalScoreButton();
     }
 }
 
-// Pistemäärä
+// Lopputulos
 let points = 0;
-let totalScore = document.querySelector(".exercises>p:last-of-type");
+let totalScore = document.querySelector(".content>p:last-of-type");
+let totalScoreButton = document.querySelector(".exercises>button:last-child");
 
-// Lopputuloksen näyttäminen
-function showTotalScore() {
+function showTotalScoreButton() {
     if (qAnswered == 5) {
-        totalScore.textContent = points + "/5";
+        totalScoreButton.classList.remove("hidden");
     }
 }
 
-console.log(answer1, answer2, answer3, answer4, answer5);
+totalScoreButton.addEventListener("click", showTotalScore);
+
+function showTotalScore() {
+    for (index of divList) {
+        index.classList.add("hidden");
+    }
+    answerTracker.classList.add("hidden");
+    lastButton.classList.add("hidden");
+    nextButton.classList.add("hidden");
+    totalScoreButton.classList.add("hidden");
+    totalScore.classList.remove("hidden");
+    totalScore.textContent = points + "/5";
+    tryAgainButton.classList.remove("hidden");
+}
+
+// Yritä uudelleen -painike
+let tryAgainButton = document.querySelector(".content>button:last-child");
+
+tryAgainButton.addEventListener("click", tryAgain);
+
+function tryAgain() {
+    window.location.reload();
+}
