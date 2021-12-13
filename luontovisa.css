@@ -95,3 +95,7 @@ h3 {
   border: 2px solid #000;
   position: relative
 }
+
+#kuva {
+  height: 195px;
+}
