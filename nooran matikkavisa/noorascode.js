@@ -35,25 +35,6 @@ function lastExercise() {
             }
         }
     }
-    /*if (!divList[1].classList.contains("hidden")) {
-        divList[1].classList.toggle("hidden");
-        divList[0].classList.toggle("hidden");
-        inputList[0].focus();
-    } else if (!divList[2].classList.contains("hidden")) {
-        divList[2].classList.toggle("hidden");
-        divList[1].classList.toggle("hidden");
-        inputList[1].focus();
-    } else if (!divList[3].classList.contains("hidden")) {
-        divList[3].classList.toggle("hidden");
-        divList[2].classList.toggle("hidden");
-        inputList[2].focus();
-    } else if (!divList[4].classList.contains("hidden")) {
-        divList[4].classList.toggle("hidden");
-        divList[3].classList.toggle("hidden");
-        inputList[3].focus();
-    } else {
-        inputList[0].focus();
-    }*/
 }
 
 function nextExercise() {
@@ -68,25 +49,6 @@ function nextExercise() {
             }
         }
     }
-    /*if (!divList[0].classList.contains("hidden")) {
-        divList[0].classList.toggle("hidden");
-        divList[1].classList.toggle("hidden");
-        inputList[1].focus();
-    } else if (!divList[1].classList.contains("hidden")) {
-        divList[1].classList.toggle("hidden");
-        divList[2].classList.toggle("hidden");
-        inputList[2].focus();
-    } else if (!divList[2].classList.contains("hidden")) {
-        divList[2].classList.toggle("hidden");
-        divList[3].classList.toggle("hidden");
-        inputList[3].focus();
-    } else if (!divList[3].classList.contains("hidden")) {
-        divList[3].classList.toggle("hidden");
-        divList[4].classList.toggle("hidden");
-        inputList[4].focus();
-    } else {
-        inputList[4].focus();
-    }*/
 }
 
 // Vastatut kysymykset
@@ -102,19 +64,13 @@ questionsAnswered();
 inputList[0].focus();
 
 // Tehtävä 1.
-let minuend = randomNumber(20, 40);
-let addend1 = randomNumber(50, 70);
-let addend2 = randomNumber(80, 100);
+let minuend = randomNumber(10, 30);
+let addend1 = randomNumber(40, 60);
+let addend2 = randomNumber(70, 90);
 
 pList[0].textContent = minuend + " - " + addend1 + " + " + addend2;
 
 let answer1 = minuend - addend1 + addend2;
-
-/*let pastries = randomNumber(5, 10);
-
-pList[0].textContent = "Osku ja Iines voittivat koulun arpajaisissa " + pastries + " mokkapalaa. Kuinka monta leivonnaista kumpikin saa?"
-
-let answer1 = pastries / 2;*/
 
 // Tehtävä 2.
 let factor1 = randomNumber(2, 9);
@@ -126,16 +82,6 @@ pList[1].textContent = dividend + " : " + factor2 + " · " + factor3;
 
 let answer2 = dividend / factor2 * factor3;
 
-/*let euros1 = randomNumber(10, 20);
-let cents1 = randomNumber(10, 99);
-let euros2 = randomNumber(3, 6);
-let cents2 = randomNumber(10, 99);
-
-pList[1].textContent = "Osku osti sienestyskirjan, joka maksoi " + euros1 + "," + cents1 + " €, ja kyniä, jotka maksoivat " + euros2 + "," + cents2 + "€. Paljonko rahaa hän käytti yhteensä?";
-
-let answer2 = euros1 + (cents1 / 100) + euros2 + (cents2 / 100);
-answer2 = Math.round(answer2 * 100) / 100;*/
-
 // Tehtävä 3.
 let factor4 = randomNumber(2, 9);
 let addend3 = randomNumber(1, 5);
@@ -145,12 +91,6 @@ pList[2].textContent = factor4 + " · (" + addend3 + " + " + addend4 + ")";
 
 let answer3 = factor4 * (addend3 + addend4);
 
-/*let wall = randomNumber(2, 4);
-
-pList[2].textContent = "Neliönmuotoisen leikkimökin yhden seinän pituus on " + wall + " metriä. Mikä on koko leikkimökin ympärysmitta?"
-
-let answer3 = wall * 4;*/
-
 // Tehtävä 4.
 let meters = randomNumber(200, 900);
 let kilometers = randomNumber(2, 9);
@@ -158,13 +98,6 @@ let kilometers = randomNumber(2, 9);
 pList[3].textContent = meters + " m + " + kilometers + " km";
 
 let answer4 = meters + kilometers * 1000;
-
-/*let time = randomNumber(10, 35);
-
-pList[3].textContent = "Iineksen koulupäivä alkaa klo 9.45. Hänen koulumatkansa kestää " + time + " minuuttia. Monelta Iineksen pitäisi lähteä kotoa, jotta hän ehtisi koululle 10 minuuttia ennen ensimmäisen tunnin alkua?";
-
-let answer4 = 9.45 - time / 100 - 0.1;
-answer4 = Math.round(answer4 * 100) / 100;*/
 
 // Tehtävä 5.
 let integer1 = randomNumber(75, 100);
@@ -175,13 +108,6 @@ pList[4].textContent = integer1 + " - " + integer2 + "," + twoDecimalPlaces;
 
 let answer5 = integer1 - (integer2 + twoDecimalPlaces / 100);
 answer5 = Math.round(answer5 * 100) / 100;
-
-/*let oskuWins = randomNumber(25, 45);
-let iinesWins = randomNumber(25, 45);
-
-pList[4].textContent = "Osku on voittanut lautapeli-illoista " + oskuWins + " prosenttia ja Iines " + iinesWins + " prosenttia. Kuinka moni ilta on päättynyt tasapeliin?";
-
-let answer5 = 100 - oskuWins - iinesWins;*/
 
 // Vastauslista
 let answerList = [answer1, answer2, answer3, answer4, answer5];
