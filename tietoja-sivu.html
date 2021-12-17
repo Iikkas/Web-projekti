@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="etusivustyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>Opi Oskun ja Iineksen kanssa</title>
+</head>
+<header class="p-3 text-warning">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center">
+            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                <use xlink:href="#bootstrap" />
+            </svg>
+            <h1 style="font-family: 'Bebas Neue', cursive; font-size: 50px;">Tietoja</h1>
+        </div>
+    </div>
+</header>
+<div class="d-flex flex-column flex-shrink-0 p-3" id="nav" style="width: 280px; background-color: #198754;">
+    <img src="osku_idle.gif" class=""></img>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto" style="font-family: 'Bebas Neue', cursive; font-size: 23px; color: #FFC107;">
+        <li class="nav-item">
+            <a href="index.html" class="nav-link">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#home" />
+                </svg>
+                Etusivu
+            </a>
+        </li>
+        <li>
+            <a href="sporttivisa.html" class="nav-link">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#speedometer2" />
+                </svg>
+                Urheiluvisa
+            </a>
+        </li>
+        <li>
+            <a href="luontovisa.html" class="nav-link">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#table" />
+                </svg>
+                Luontovisa
+            </a>
+        </li>
+        <li>
+            <a href="iikkaspage.html" class="nav-link">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#grid" />
+                </svg>
+                Matikkavisa - Helppo
+            </a>
+        </li>
+        <li>
+            <a href="noorasexercises.html" class="nav-link">
+                <svg class="bi me-2" width="16" height="16">
+                    <use xlink:href="#people-circle" />
+                </svg>
+                Matikkavisa - Haastava
+            </a>
+        </li>
+    </ul>
+    <hr>
+</div>
+<div class="align-items-center justify-content-center" id="content" style="background-color:lightyellow;">
+    <div class="row justify-content-center" id="introduction" style="text-align: center;">
+        <div class="col-6 col-sm-3 p-3 w-100">
+            Sivuston tekijät: Iikka Niemikorpi, Ilkka Rekilä, Salla Suomela, Noora Turpeinen
+        </div>
+        <!-- Force next columns to break to new line -->
+        <div class="w-100"></div>
+        <div class="col-6 col-sm-3 w-100">
+            <ul style="list-style-type: none;">
+                <li>Urheiluvisa: Salla Suomela</li>
+                <li>Luontovisa: Ilkka Rekilä</li>
+                <li>Matikkavisa 1: Iikka Niemikorpi</li>
+                <li>Matikkavisa 2: Noora Turpeinen</li>
+            </ul>
+        </div>
+        <div class="col-6 col-sm-3 w-100">
+            
+        </div>
+    </div>
+    <div id="cards">
+        <div class="card" id="card1" style="width: 18rem; text-align: center; background-color: #198754; color: white">
+            <img src="sport.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Urheiluvisa</h5>
+              <a href="sporttivisa.html" class="btn mt-2" style="background-color: #FFC107; color: #104d30;">Siirry peliin</a>
+            </div>
+        </div>
+        <div class="card" id="card2" style="width: 18rem; text-align: center; background-color: #198754; color: white">
+            <img src="numbers.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Matikkavisa - Helppo</h5>
+              <a href="iikkaspage.html" class="btn mt-2" style="background-color: #FFC107; color: #104d30;">Siirry peliin</a>
+            </div>
+        </div>
+        <div class="card" id="card3" style="width: 18rem; text-align: center; background-color: #198754; color: white">
+            <img src="deer.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Luontovisa</h5>
+              <a href="luontovisa.html" class="btn mt-2" style="background-color: #FFC107; color: #104d30;">Siirry peliin</a>
+            </div>
+        </div>
+        <div class="card" id="card4" style="width: 18rem; text-align: center; background-color: #198754; color: white">
+            <img src="blocks.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Matikkavisa - Haastava</h5>
+              <a href="noorasexercises.html" class="btn mt-2" style="background-color: #FFC107; color: #104d30;">Siirry peliin</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer -->
+<footer class="page-footer font-small cyan darken-3">
+    <!-- Footer Elements -->
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">
+        © 2021 Iikka Niemikorpi, Ilkka Rekilä, Salla Suomela, Noora Turpeinen
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+</body>
+</html>
