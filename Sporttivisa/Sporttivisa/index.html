@@ -1,0 +1,87 @@
+<!--/* I have been used code source from KINDSONTHEGENIUS. I have also put my own code here too */-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urheiluvisa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+
+
+<header class="p-3 text-warning">
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center">
+            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                <use xlink:href="#bootstrap" />
+            </svg>
+            <h1 style="font-family: 'Bebas Neue', cursive; font-size: 60px; text-align: center; color: #ffc107;">Urheiluvisa
+                <img src="pictures/osku_run.gif" width=100px;>
+            </h1>
+        </div>
+    </div>
+ 
+    <li>
+        <a href="" class="nav-link">
+            <svg class="bi me-2" width="16" height="16">
+                <use xlink:href="../etusivu/etusivu-webprojekti.html" />
+            </svg>
+            <button type="button" id="button" style="font-family: 'Bebas Neue', cursive; font-size: 20px; text-align:center; color:white; border-radius: 8px;background-color:#ffc107; border:none;">Takaisin Etusivulle</button>
+          
+        </a>
+    </li>
+</header>
+<body>
+  <nav>
+
+    
+  </nav>
+    <div class="quiz-container">
+        <div class="question-number">
+            <h3>Kysymys <span class="question-num-value"></span> / 
+                <span class="total-questions"></span>
+            </h3>
+        </div>
+        <div class="question">
+            How do you declare a Javascript variable?
+        </div>
+        <div class="options">
+            <div id="0" class="option1" onclick="check(this)"></div>
+            <div id="1" class="option2" onclick="check(this)"></div>
+            <div id="2" class="option3" onclick="check(this)"></div>
+            <div id="3" class="option4" onclick="check(this)"></div>
+        </div>
+        <div class="button btn">
+            <button type="button" onclick="next()" class="btn">Seuraava</button>
+        </div>
+        <div class="answers-tracker">
+    
+        </div>
+    </div>
+    <div class="quiz-over">
+        <div class="box">
+            <h1>Hienoa ! <br />
+                Sait <span class="correct-answers"></span> /
+                <span class="total-questions2"></span> oikein. 
+                Prosentteina tämä on <span class="percentage"></span>.
+                Halutessasi voit yrittää uudelleen.
+            </h1>
+            <button type="button" onclick="tryAgain()">Yritä uudelleen!</button>
+        </div>
+    </div>
+<!-- Footer -->
+<footer class="page-footer font-small cyan darken-3 bg-success text-white">
+    <!-- Footer Elements -->
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">
+        © 2021 Salla Suomela
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+    <script src="js/sportti.js"></script>
+</body>
+</html>
