@@ -5,6 +5,7 @@ let divList = document.querySelectorAll(".exercises>div");
 let pList = document.querySelectorAll(".exercises>div>p:nth-child(2)");
 let inputList = document.querySelectorAll("input");
 let buttonList = document.querySelectorAll(".exercises>div>button");
+let imgList = document.querySelectorAll("img");
 
 // Satunnaislukugeneraattori
 function randomNumber(min, max) {
@@ -155,6 +156,13 @@ function showTotalScore() {
     totalScore.classList.remove("hidden");
     totalScore.textContent = points + "/5";
     tryAgainButton.classList.remove("hidden");
+    if (points == 4 || points == 5) {
+        imgList[0].classList.remove("hidden");
+    } else if (points == 3 || points == 2) {
+        imgList[1].classList.remove("hidden");
+    } else {
+        imgList[2].classList.remove("hidden");
+    }
 }
 
 // Yritä uudelleen -painike
@@ -165,3 +173,5 @@ tryAgainButton.addEventListener("click", tryAgain);
 function tryAgain() {
     window.location.reload();
 }
+
+console.log(answerList)

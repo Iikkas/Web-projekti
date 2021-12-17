@@ -9,6 +9,11 @@ ul {
     padding: 0;
 }
 
+.content {
+    font-size: 1.25em;
+    color: #104d30;
+}
+
 .content > p {
     margin: 2em 0 0 3em;
 }
@@ -33,13 +38,14 @@ body {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto 1fr auto;
+    font-family: 'Bebas Neue';
+    background-color: lightyellow;
 }
 
 nav {
     grid-column: 1/2;
     grid-row: 1/2;
     background-color: #198754;
-    color: white;
 }
 
 footer {
@@ -72,7 +78,7 @@ footer {
 }
 
 .exercises > button:last-child {
-    margin: 1em 0 0 3em;
+    margin: 1em 0 3em 3em;
     padding: 0.5em 0.75em 0.5em 0.75em;
     border: none;
     cursor: pointer;
@@ -87,4 +93,10 @@ footer {
 
 input {
     display: inline-block;
+    color: #104d30;
+}
+
+button {
+    background-color: #FFC107;
+    color: #104d30;
 }
