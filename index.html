@@ -8,27 +8,32 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="etusivustyle.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/dbbfcc22fb.js" crossorigin="anonymous"></script>
     <title>Opi Oskun ja Iineksen kanssa</title>
 </head>
+<body>
+<!-- Header -->
 <header class="p-3 text-warning">
     <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center">
             <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
                 <use xlink:href="#bootstrap" />
             </svg>
-            <h1 style="font-family: 'Bebas Neue', cursive; font-size: 50px;">Opi Oskun ja Iineksen kanssa!</h1>
+            <h1>Opi Oskun ja Iineksen kanssa!</h1>
         </div>
     </div>
 </header>
-<div class="d-flex flex-column flex-shrink-0 p-3" id="nav" style="width: 280px; background-color: #198754;">
-    <img src="Idle.gif" class=""></img>
+<!-- Nav -->
+<div class="d-flex flex-column flex-shrink-0 p-3" id="nav">
+    <img src="Idle.gif" title="Game Art 2D, CCO License, https://www.gameart2d.com/cat-and-dog-free-sprites.html"></img>
     <hr>
-    <ul class="nav nav-pills flex-column mb-auto" style="font-family: 'Bebas Neue', cursive; font-size: 23px; color: #FFC107;">
+    <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
             <a href="tietoja-sivu.html" class="nav-link">
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#home" />
                 </svg>
+                <i class="fas fa-info-circle"></i>
                 Tietoja
             </a>
         </li>
@@ -37,6 +42,7 @@
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#speedometer2" />
                 </svg>
+                <i class="fas fa-running"></i>
                 Urheiluvisa
             </a>
         </li>
@@ -45,6 +51,7 @@
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#table" />
                 </svg>
+                <i class="fas fa-tree"></i>
                 Luontovisa
             </a>
         </li>
@@ -52,6 +59,7 @@
             <a href="iikkaspage.html" class="nav-link">
                 <svg class="bi me-2" width="16" height="16">
                 </svg>
+                <i class="fas fa-plus"></i>
                 Matikkavisa - Helppo
             </a>
         </li>
@@ -60,18 +68,20 @@
                 <svg class="bi me-2" width="16" height="16">
                     <use xlink:href="#people-circle" />
                 </svg>
+                <i class="fas fa-divide"></i>
                 Matikkavisa - Haastava
             </a>
         </li>
     </ul>
     <hr>
 </div>
-<div class="container-fluid align-self-center justify-self-center" id="content" style="background-color:lightyellow; white-space: nowrap;">
-    <div class="row justify-content-center" id="introduction" style="text-align: center;">
+<!-- Content -->
+<div class="container-fluid align-self-center justify-self-center">
+    <!-- Introduction -->
+    <div class="row justify-content-center" id="introduction">
         <div class="col-6 col-sm-3 p-3 w-100">
             Tervetuloa oppimaan Oskun ja Iineksen kanssa!
         </div>
-        <!-- Force next columns to break to new line -->
         <div class="w-100"></div>
         <div class="col-6 col-sm-3 w-100">
             Sivusto koostuu urheilu- ja luontovisoista sekä kahdesta matikkavisasta, jotka on laadittu 1-6-luokkalaisille.
@@ -80,46 +90,43 @@
             Urheilu- ja luontovisat sisältää viisi monivalintatehtävää. Matikkavisoissa on viisi laskutehtävää.
         </div>
     </div>
+    <!-- Cards -->
     <div id="cards">
-        <div class="card" id="card1" style="width: 18rem; text-align: center; background-color: #198754; color: white">
-            <img src="sport.jpg" class="card-img-top" alt="...">
+        <div class="card" id="card1">
+            <img src="sport.jpg" class="card-img-top" alt="sport" title="Pixabay, anncapictures, Pixabay License, https://pixabay.com/photos/tartan-track-athletics-2678544/">
             <div class="card-body">
               <h5 class="card-title">Urheiluvisa</h5>
-              <a href="sporttivisa.html" class="btn mt-2" style="background-color: #FFC107; color: #104d30;">Siirry peliin</a>
+              <a href="sporttivisa.html" class="btn mt-2">Siirry peliin</a>
             </div>
         </div>
-        <div class="card" id="card2" style="width: 18rem; text-align: center; background-color: #198754; color: white">
-            <img src="numbers.jpg" class="card-img-top" alt="...">
+        <div class="card" id="card2">
+            <img src="numbers.jpg" class="card-img-top" alt="numbers" title="Pixabay, _Alicja_, Pixabay License, https://pixabay.com/photos/numbers-counting-numbers-education-4014181/">
             <div class="card-body">
               <h5 class="card-title">Matikkavisa - Helppo</h5>
-              <a href="iikkaspage.html" class="btn mt-2" style="background-color: #FFC107; color: #104d30;">Siirry peliin</a>
+              <a href="iikkaspage.html" class="btn mt-2">Siirry peliin</a>
             </div>
         </div>
-        <div class="card" id="card3" style="width: 18rem; text-align: center; background-color: #198754; color: white">
-            <img src="deer.jpg" class="card-img-top" alt="...">
+        <div class="card" id="card3">
+            <img src="deer.jpg" class="card-img-top" alt="deer" title="Pixabay, smarko, Pixabay License, https://pixabay.com/photos/deer-mammal-young-animal-wild-1367217/">
             <div class="card-body">
               <h5 class="card-title">Luontovisa</h5>
-              <a href="luontovisa.html" class="btn mt-2" style="background-color: #FFC107; color: #104d30;">Siirry peliin</a>
+              <a href="luontovisa.html" class="btn mt-2">Siirry peliin</a>
             </div>
         </div>
-        <div class="card" id="card4" style="width: 18rem; text-align: center; background-color: #198754; color: white">
-            <img src="blocks.jpg" class="card-img-top" alt="...">
+        <div class="card" id="card4">
+            <img src="blocks.jpg" class="card-img-top" alt="blocks" title="Pixabay, an_photos, Pixabay License, https://pixabay.com/photos/color-school-numbers-cubes-math-4503279/">
             <div class="card-body">
               <h5 class="card-title">Matikkavisa - Haastava</h5>
-              <a href="noorasexercises.html" class="btn mt-2" style="background-color: #FFC107; color: #104d30;">Siirry peliin</a>
+              <a href="noorasexercises.html" class="btn mt-2">Siirry peliin</a>
             </div>
         </div>
     </div>
 </div>
 <!-- Footer -->
 <footer class="page-footer font-small cyan darken-3">
-    <!-- Footer Elements -->
-    <!-- Copyright -->
     <div class="footer-copyright text-center py-3">
         © 2021 Iikka Niemikorpi, Ilkka Rekilä, Salla Suomela, Noora Turpeinen
     </div>
-    <!-- Copyright -->
-  </footer>
-  <!-- Footer -->
+</footer>
 </body>
 </html>

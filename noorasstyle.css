@@ -1,102 +1,160 @@
 /* Noora Turpeinen */
 
-h5 {
-    padding-bottom: 0.25em;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.content {
-    font-size: 1.25em;
-    color: #104d30;
-}
-
-.content > p {
-    margin: 2em 0 0 3em;
-}
-
-.exercises > div > p:last-child {
-    padding-top: 1em;
-}
-
-.exercises > div > button {
-    margin-left: 0.5em;
-    padding: 0.5em 0.75em 0.5em 0.75em;
-    border: none;
-    cursor: pointer;
-}
-
-.exercises > div {
-    padding: 1em 0 1em 3em;
-}
-
 body {
     height: 100vh;
+    width: 100vw;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto 1fr auto;
-    font-family: 'Bebas Neue';
     background-color: lightyellow;
+    font-family: 'Bebas Neue';
 }
 
+/* Nav */
 nav {
     grid-column: 1/2;
     grid-row: 1/2;
     background-color: #198754;
 }
 
+nav > a > img {
+    height: 100px;
+    width: auto;
+    margin-top: 0.15em;
+}
+
+h2 {
+    color: #FFC107;
+    font-size: 2.25em;
+    cursor: default;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* Content */
+.content {
+    margin: 0.5em 1em 1.5em 1em;
+    justify-self: center;
+    color: #104D30;
+    font-size: 1.25em;
+    text-align: center;
+}
+
+button {
+    padding: 0.5em 0.75em;
+    background-color: #FFC107;
+    border: none;
+    border-radius: 5px;
+    color: #104D30;
+    cursor: pointer;
+}
+
+.content > button:first-child {
+    margin: 1.5em 0.75em 0 1em;
+}
+
+.content > button:nth-child(2) {
+    margin: 1.5em 1em 0 0.75em;
+}
+
+.content > p {
+    margin: 1.85em 1.5em 0.75em 1.5em;
+}
+
+/* Exercises */
+.exercises {
+    width: 23em;
+    background: linear-gradient(to bottom, #198754 0%, #198754 25%, #FDF4AF 25%, #FDF4AF 100%);
+    border: 3px solid #104D30;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.exercises > div {
+    padding: 1em 5em 0.5em 1em;
+}
+
+h5 {
+    padding: 0.1em 0 0.25em 0.3em;
+    border-radius: 5px;
+    color: #ffff;
+    font-size: 1.35em;
+}
+
+.exercises > div > p:first-of-type {
+    margin-top: 1em;
+    margin-left: 0.3em;
+    font-size: 1.3em;
+}
+
+input {
+    margin-left: 0.3em;
+    padding-left: 0.25em;
+    display: block;
+    color: #104D30;
+}
+
+.exercises > div > button {
+    margin: 1.5em 0.5em 1em 0.3em;
+    display: inline-block;
+}
+
+.exercises > div > p:last-child {
+    padding-top: 0.5em;
+    display: inline-block;
+    font-size: 0.83em;
+}
+
+/* Content pt 2 */
+.content > button:nth-last-of-type(2) {
+    margin: 1.75em 1em 0.25em 1em;
+}
+
+.content > p:last-of-type {
+    margin-top: 1.65em;
+    font-size: 35px;
+}
+
+img {
+    height: auto;
+    width: 55%;
+    margin: 0.25em auto 0 auto;
+}
+
+.content > button:last-child {
+    margin: 2em auto 0 auto;
+}
+
+/* Footer */
 footer {
     grid-column: 1/2;
     grid-row: 3/4;
     background-color: #198754;
+    color: #FFC107;
 }
 
+/* Classes only used for adding style attributes */
 .hidden {
     display: none;
+    border-style: none;
 }
 
-.content > button:first-child {
-    margin: 3em 0 0.25em 3em;
-    padding: 0.5em 0.75em 0.5em 0.75em;
-    border: none;
-    cursor: pointer;
+.inlineblock {
+    display: inline-block;
 }
 
-.content > button:nth-child(2) {
-    margin: 3em 0 0.25em 1.5em;
-    padding: 0.5em 0.75em 0.5em 0.75em;
-    border: none;
-    cursor: pointer;
-}
-
-.exercises > div > button {
-    margin: 1.5em 0;
+.block {
     display: block;
 }
 
-.exercises > button:last-child {
-    margin: 1em 0 3em 3em;
-    padding: 0.5em 0.75em 0.5em 0.75em;
-    border: none;
-    cursor: pointer;
+.green {
+    background-color: lightgreen;
+    color: green;
 }
 
-.content > button:last-child {
-    margin: 2em;
-    padding: 0.5em 0.75em 0.5em 0.75em;
-    border: none;
-    cursor: pointer;
-}
-
-input {
-    display: inline-block;
-    color: #104d30;
-}
-
-button {
-    background-color: #FFC107;
-    color: #104d30;
+.red {
+    background-color: lightsalmon;
+    color: red;
 }

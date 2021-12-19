@@ -1,54 +1,54 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="author" content="Noora Turpeinen">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="noorasstyle.css">
     <title>Matikkavisa - Haastava</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand p-4 justify-self-center" href="noorasexercises.html" style="color: #FFC107; font-size: 40px;">Matikkavisa - Haastava</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link justify-self-center" href="index.html" style="color: #FFC107; font-size: 25px;">Etusivu</a>
-          </div>
-        </div>
-      </nav>
+    <!-- Nav -->
+    <nav class="navbar">
+        <a class="navbar-brand">
+            <img src="iines-smile.png" class="d-inline-block" alt="iines-smile"> <!-- Game Art 2D, CCO License, https://www.gameart2d.com/cat-and-dog-free-sprites.html -->
+            <h2 class="d-inline-block align-center">Matikkavisa - Haastava</h2>
+        </a>
+        <ul>
+            <li class="nav-item"><a href="index.html" class="nav-link" style="margin-right: 0.5em; color: #FFC107; font-size: 1.5em;">Takaisin etusivulle</a></li>
+        </ul>
+    </nav>
+    <!-- Content -->
     <div class="content">
         <button>Edellinen</button>
         <button>Seuraava</button>
         <p></p>
+        <!-- Exercises -->
         <div class="exercises">
             <div>
-                <h5>1. Yhteen- ja vähennyslaskut</h5>
+                <h5>1. Yhteenlaskut</h5>
                 <p></p>
                 <input type="number">
                 <button>Tarkista</button>
             </div>
             <div class="hidden">
-                <h5>2. Kerto- ja jakolaskut</h5>
+                <h5>2. Vähennyslaskut</h5>
                 <p></p>
                 <input type="number">
                 <button>Tarkista</button>
             </div>
             <div class="hidden">
-                <h5>3. Laskujärjestys</h5>
+                <h5>3. Kerto- ja jakolaskut</h5>
                 <p></p>
                 <input type="number">
                 <button>Tarkista</button>
             </div>
             <div class="hidden">
-                <h5>4. Yksikkömuunnokset</h5>
+                <h5>4. Laskujärjestys</h5>
                 <p></p>
-                <input type="number"> m
+                <input type="number">
                 <button>Tarkista</button>
             </div>
             <div class="hidden">
@@ -57,20 +57,21 @@
                 <input type="number">
                 <button>Tarkista</button>
             </div>
-            <button class="hidden">Näytä lopputulos</button>
         </div>
+        <!-- Content pt 2 -->
+        <button class="hidden">Näytä lopputulos</button>
         <p class="hidden"></p>
-        <img src="osku-jump.png" class="hidden">
-        <img src="iines-walk.png" class="hidden">
-        <img src="osku-sad.png" class="hidden">
-        <button class="hidden">Yritä uudelleen!</button>
+        <img src="osku-jump.png" class="hidden" alt="osku-jump"> <!-- Game Art 2D, CCO License, https://www.gameart2d.com/cat-and-dog-free-sprites.html -->
+        <img src="iines-walk.png" class="hidden" alt="iines-walk"> <!-- Game Art 2D, CCO License, https://www.gameart2d.com/cat-and-dog-free-sprites.html -->
+        <img src="osku-sad.png" class="hidden" alt="osku-sad"> <!-- Game Art 2D, CCO License, https://www.gameart2d.com/cat-and-dog-free-sprites.html -->
+        <button class="hidden">Yritä uudelleen</button>
     </div>
-    <footer class="page-footer font-small cyan darken-3 text-white">
+    <!-- Footer -->
+    <footer class="page-footer font-small cyan darken-3">
         <div class="footer-copyright text-center py-3">
             <p>© 2021 Noora Turpeinen</p>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="noorascode.js" defer></script>
 </body>
 </html>
